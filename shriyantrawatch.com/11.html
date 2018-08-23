@@ -1,0 +1,139 @@
+<html>
+<head>
+<title>T-123 Model</title>
+<link rel="stylesheet" href="slideshow.css" type="text/css" />
+<link rel="stylesheet" href="hover.css" type="text/css" />
+<link rel="stylesheet" href="style2.css" type="text/css" />
+<style>
+.mySlides {display:none;}
+</style>
+</head>
+<body>
+<h1 id="heading">STERLING TABLE WATCH (TRIANGULAR)</h2>
+<div id="slideshow">
+	
+<div id="left">
+<div id="pic"><img class="demo w3-opacity w3-hover-opacity-off" src="11.1.jpg" style="width:100%" onclick="currentDiv(1)"></div>
+<div id="pic"><img class="demo w3-opacity w3-hover-opacity-off" src="11.2.jpg" style="width:100%" onclick="currentDiv(2)"></div>
+<div id="pic">  <img class="demo w3-opacity w3-hover-opacity-off" src="11.3.jpg" style="width:100%" onclick="currentDiv(3)"></div>
+</div>
+<div id="center">
+<div style="max-width:600px">
+  <img class="mySlides" src="11.1.jpg" style="width:100%">
+  <img class="mySlides" src="11.2.jpg" style="width:100%">
+  <img class="mySlides" src="11.3.jpg" style="width:100%">    
+</div>
+</div>
+<div id="right">
+<center><a class="button" href="order_now.html">Order Now</a></center>
+
+<ul>
+<li><a class="hvr-buzz-out" href="index.html">Home</a></li>
+<li><a class="hvr-buzz-out" href="index.html#our_products">Our Products</a></li>
+
+<li><a class="hvr-buzz-out" href="order_now.html">Order Now</a></li>
+<li><a class="hvr-buzz-out" href="index.html#contact_us">Contact Us</a></li>				
+<li><a class="hvr-buzz-out" href="index.html#about_us">About Us</a></li>
+</ul>
+
+</div>
+
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";  
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}    
+    x[myIndex-1].style.display = "block";  
+    setTimeout(carousel, 2000); // Change image every 2 seconds
+}
+</script>
+
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function currentDiv(n) {
+  showDivs(slideIndex = n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+     dots[i].className = dots[i].className.replace(" w3-opacity-off", "");
+  }
+  x[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " w3-opacity-off";
+}
+</script>
+
+
+</div>
+
+<div id="description">
+
+<h1>Product Specifications</h1>
+<br>
+<table>
+<tr>
+<th id="a">Body Color</th>
+<th id="b">Silver</th>
+</tr>
+<tr>
+<th id="a">Material</th>
+<th id="b">Stainless Steel</th>
+</tr>
+<tr>
+<th id="a">Brand</th>
+<th id="b">Shri SAMAY by Samruddhi Engineering Projects</th>
+</tr>
+<tr>
+<th id="a">Dial</th>
+<th id="b">Silver</th>
+</tr>
+<tr>
+<th id="a">Dial Color</th>
+<th id="b">Silver</th>
+</tr>
+<tr>
+<th id="a">Case Shape</th>
+<th id="b">Triangular</th>
+</tr>
+<tr>
+<th id="a">Model Number</th>
+<th id="b">T-123</th>
+</tr>
+<tr>
+<th id="a">Movement</th>
+<th id="b">Miyota Japan</th>
+</tr>
+</table>
+</div>
+
+<div id="footer">
+<div id="footer">
+<footer>
+<p><a href="index.html">Home</a> | <a href="index.html#our_products">Our Products</a> | <a href="order_now.html">Order Now</a> | <a href="index.html#contact_us">Contact Us</a> | <a href="index.html#about_us">About Us</a></p>
+<p>Copyright &copy; Samruddhi Engineering Projects </p>
+</footer>		
+</div>
+
+</body>
+</html>
